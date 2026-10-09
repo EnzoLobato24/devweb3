@@ -1,15 +1,9 @@
-// =====================================================
-// Introdução ao JavaScript - Desafios práticos
-// Execute com: node app.js  (ou cole no console do navegador)
-// =====================================================
 
 'use strict';
-
 const titulo = (texto) => console.log(`\n===== ${texto} =====`);
 
-// =====================================================
 // BLOCO 1 - FUNDAMENTOS E VARIÁVEIS
-// =====================================================
+
 titulo('BLOCO 1 - Fundamentos e Variáveis');
 
 // 1.1 let: valor inicial + soma de 10 na linha seguinte
@@ -44,10 +38,8 @@ console.log(`texto      = ${texto} -> typeof: ${typeof texto}`);
 console.log(`numero     = ${numero} -> typeof: ${typeof numero}`);
 console.log(`verdadeiro = ${verdadeiro} -> typeof: ${typeof verdadeiro}`);
 console.log(`indefinido = ${indefinido} -> typeof: ${typeof indefinido}`);
-// Curiosidade: typeof null retorna "object" (bug histórico da linguagem)
 console.log(`nulo       = ${nulo} -> typeof: ${typeof nulo} (bug histórico: null é primitivo!)`);
 
-// 1.4 Template Literals vs concatenação
 console.log('\n-- 1.4 Template literals vs concatenação --');
 const nome = 'Maria';
 const idade = 25;
@@ -59,21 +51,20 @@ console.log('Template literal:', fraseTemplate);
 console.log('Concatenação    :', fraseConcatenada);
 console.log('São iguais?', fraseTemplate === fraseConcatenada);
 
-// =====================================================
+
 // BLOCO 2 - FUNÇÕES
-// =====================================================
 titulo('BLOCO 2 - Funções');
 
-// 2.1 Função declarada: chamada ANTES da declaração (hoisting)
+// 2.1 
 console.log('\n-- 2.1 Função declarada e hoisting --');
-console.log('ehMaiorDeIdade(20):', ehMaiorDeIdade(20)); // funciona graças ao hoisting
+console.log('ehMaiorDeIdade(20):', ehMaiorDeIdade(20)); 
 console.log('ehMaiorDeIdade(15):', ehMaiorDeIdade(15));
 
 function ehMaiorDeIdade(idade) {
   return idade >= 18;
 }
 
-// 2.2 Função de expressão: chamada ANTES da declaração -> ReferenceError
+
 console.log('\n-- 2.2 Função de expressão e ReferenceError --');
 try {
   console.log(ehMaiorDeIdadeExpressao(20)); // erro!
@@ -90,7 +81,7 @@ const ehMaiorDeIdadeExpressao = function (idade) {
 
 console.log('Depois da declaração:', ehMaiorDeIdadeExpressao(20)); // true
 
-// 2.3 Função dobro nas três formas
+// 2.3 
 console.log('\n-- 2.3 dobro: declarada, expressão e arrow --');
 
 function dobroDeclarada(n) {
@@ -101,7 +92,7 @@ const dobroExpressao = function (n) {
   return n * 2;
 };
 
-const dobroArrow = (n) => n * 2; // forma curta: retorno implícito
+const dobroArrow = (n) => n * 2;
 
 console.log('dobroDeclarada(4):', dobroDeclarada(4));
 console.log('dobroExpressao(4):', dobroExpressao(4));
@@ -114,9 +105,9 @@ const dobroPadrao = (n = 1) => n * 2;
 console.log('dobroPadrao(5):', dobroPadrao(5));
 console.log('dobroPadrao() :', dobroPadrao()); // usa n = 1 -> 2
 
-// =====================================================
+
 // BLOCO 3 - CONTROLE DE FLUXO
-// =====================================================
+
 titulo('BLOCO 3 - Controle de Fluxo');
 
 // 3.1 classificarNota com if/else
@@ -134,7 +125,7 @@ console.log('Nota 4.5 ->', classificarNota(4.5));
 
 // 3.2 Semáforo com switch
 console.log('\n-- 3.2 Semáforo (switch) --');
-const corSemaforo = 'amarelo'; // experimente: 'vermelho', 'amarelo', 'verde'
+const corSemaforo = 'amarelo'; 
 
 switch (corSemaforo) {
   case 'vermelho':
